@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Hungry? Get Grab.</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="assets/logo.png">
+          <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+          </ul>
+        </nav>
+      <div class="overlay"></div>
+    </header>
+
+    <section class="hero-section">
+      <div class="content">
+        <h1>Grab. Making everyday better. </h1>
+        <p>
+          From essential services to earning opportunities. We're an all-in-one platform.
+        </p>
+        <button>Order Now</button>
+      </div>
+    </section>
+
+    <script>
+      const backgrounds = [
+        "assets/background.jpg",
+        "assets/bg.jpg",
+        "assets/bckgrnd.jpg",
+      ];
+
+      function getRandomBackground() {
+        return backgrounds[Math.floor(Math.random() * backgrounds.length)];
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const randomBackground = getRandomBackground();
+        document.body.style.backgroundImage = `url(${randomBackground})`;
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+      });
+    </script>
+  </body>
+</html>
